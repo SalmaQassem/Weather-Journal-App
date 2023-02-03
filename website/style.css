@@ -1,0 +1,181 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background: #fffff8;
+}
+
+#app {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 100vh;
+    width: 100%;
+    background: url("/images/background.jpg");
+    background-size: 100% 100%;
+    border-radius: 50px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 1em;
+}
+
+.inputs {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.holder {
+    height: 90%;
+    width: 65%;
+    background-image: url("/images/tablet.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#entryHolder {
+    height: 79%;
+    width: 90%;
+    background: rgba(59, 74, 107, .2);
+    padding: 40px;
+    color: #332d2d;
+    position: absolute;
+    top: 10%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+#region {
+    font-size: 32px;
+}
+
+#date {
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+#temp {
+    font-size: 70px;
+}
+
+#weather,
+#content {
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.outputs {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#zip,
+#feelings,
+button {
+    width: 80%;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+input {
+    height: 40px;
+    color: black;
+    font-size: 20px;
+    border: none;
+}
+
+button {
+    height: 50px;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 4px 5px #444;
+}
+
+textarea {
+    resize: none;
+    border: none;
+    font-size: 20px;
+}
+
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */
+    font-family: 'Roboto', sans-serif;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-family: 'Roboto', sans-serif;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    font-family: 'Roboto', sans-serif;
+} 
+
+/*Responsive Styles*/
+@media screen and (max-width: 992px) {
+    #app {
+        grid-template-columns: none;
+        grid-template-rows: repeat(2, 1fr);
+        background-size: 100% 116%;
+    }
+    .inputs {
+        order: 2;
+    }
+    .holder {
+        width: 100%;
+        height: 100%;
+        background-image: none;
+    }
+    #entryHolder {
+        height: 100%;
+        width: 79%;
+        top: 0;
+        border-radius: 6px;
+    }
+    #region {
+        font-size: 24px;
+    }
+    #date {
+        font-size: 17px;
+    }
+    #temp {
+        font-size: 50px;
+    }
+    #date,
+    #weather,
+    #content{
+        font-size: 16px;
+    }
+    .outputs {
+        order: 1;
+    }
+    button {
+        width: 50%;
+    }
+}
