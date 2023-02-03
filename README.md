@@ -2,7 +2,7 @@
 
 ## Project Description
 
-<p>This project is an asynchronous web app that uses Web API \"Open Weather Map\" and user data \"Zip Code\" to get the weather.</p>
+<p>This project is an asynchronous web app that uses Web API "Open Weather Map" and user data "Zip Code" to get the weather.</p>
 
 ## Main Functions
 
